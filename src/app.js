@@ -47,8 +47,8 @@ let days = [
     navigator.geolocation.getCurrentPosition(searchLocation);
   }
   
-  let swag = document.querySelector("#search-box");
-  swag.addEventListener("submit", handleSubmit);
+  let searchInput = document.querySelector("#search-box");
+  searchInput.addEventListener("submit", handleSubmit);
   
   let locationButton = document.querySelector("#location-selector");
   locationButton.addEventListener("click", getLocation);
