@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/53dbf51682.js" crossorigin="anonymous"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -15,6 +17,79 @@
     <link rel="stylesheet" href="src/style.css" />
 </head>
 <body>
+  <div class="weatherapp">
+    <div class="city">
+   <h1 id="location">Salem, VA</h1>
+   <button>
+           <i id="location-selector" class="fas fa-location-arrow"></i>
+   </button>
+<form id="search-box">
+   <input type="search" id="city-search" placeholder="Search for your city"></i>
+   <input type="submit" value="go"> 
+</form>
+   </div>
+   <div class="weekly">
+       <h3 id="fuck">Currently</h3>
+       <h1 id="hone">50°</h1>
+       <div class="weathergrid">
+           <div class="row">
+               <div class="col">
+                   Sunday
+               </div>
+               <div class="col">
+                   <i class="fas fa-cloud-showers-heavy"></i>
+               </div>
+               <div class="col">
+                   52° / 37°
+               </div>
+           </div>
+           <div class="row">
+               <div class="col">
+                   Monday
+               </div>
+               <div class="col">
+                   <i class="fas fa-cloud"></i>
+               </div>
+               <div class="col">
+                   45° / 32°
+               </div>
+           </div>
+           <div class="row">
+               <div class="col">
+                   Tuesday
+               </div>
+               <div class="col">
+                   <i class="fas fa-cloud"></i>
+               </div>
+               <div class="col">
+                   49° / 33°
+               </div>
+           </div>
+           <div class="row">
+               <div class="col">
+                   Wednesday
+               </div>
+               <div class="col">
+                   <i class="fas fa-cloud"></i>
+               </div>
+               <div class="col">
+                   46° / 27°
+               </div>
+           </div>
+           <div class="row">
+               <div class="col">
+                   Thursday
+               </div>
+               <div class="col">
+                   <i class="fas fa-cloud"></i>
+               </div>
+               <div class="col">
+                   48° / 32°
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
     <script src="src/app.js"></script>
 </body>
 </html>
