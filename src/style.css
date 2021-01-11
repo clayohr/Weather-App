@@ -1,0 +1,94 @@
+h1,
+h2,
+h3,
+h5,
+button,
+::placeholder,
+.col, .value {
+  font-family: monospace;
+  text-align: center;
+  color: #f4f3ee;
+}
+
+body {
+  background: #8a817c;
+}
+
+input {
+  background: #e0afa0;
+  border: 1px solid #8a817c;
+  text-align: center;
+  color: #463f3a;
+  font-size: 12px;
+}
+i {
+  color: #e0afa0;
+}
+
+button {
+  border: 1px solid #8a817c;
+  text-align: center;
+  background: #e0afa0;
+  padding: 2px 6px 0px;
+  display: inline-block;
+  margin: 10px auto;
+}
+
+h5 {
+  text-align: center;
+  text-decoration: none;
+  color: #463f3a;
+}
+
+a {
+  text-decoration: none;
+  color: #463f3a;
+}
+.city {
+  border: 1px solid #463f3a;
+  margin: 0 auto;
+  display: block;
+  max-width: 300px;
+  margin-bottom: 20px;
+  padding: 16px;
+  background: #463f3a;
+}
+
+.weatherapp {
+  display: block;
+  margin: auto;
+  max-width: 600px;
+  margin-top: 20px;
+  border: 1px solid #463f3a;
+  text-align: center;
+  padding: 20px 0px;
+  background: #bcb8b1;
+}
+
+.weekly {
+  border: 1px solid #463f3a;
+  display: block;
+  margin: 0 auto;
+  max-width: 350px;
+  height: 400px;
+  padding: 18px;
+  background: #463f3a;
+}
+.row {
+  padding: 19px 0px;
+}
+
+::placeholder {
+  text-align: center;
+  color: #463f3a;
+}
+
+#location-selector {
+  color: #463f3a;
+  font-size: 12px;
+  margin: 0 auto;
+}
+
+#search-box {
+  padding: 10px;
+}
