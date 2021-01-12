@@ -2,6 +2,7 @@ h1,
 h2,
 h3,
 h5,
+h6,
 button,
 ::placeholder,
 .col, .value {
@@ -70,7 +71,6 @@ a {
   display: block;
   margin: 0 auto;
   max-width: 350px;
-  height: 400px;
   padding: 18px;
   background: #463f3a;
 }

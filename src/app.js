@@ -19,9 +19,13 @@ let days = [
   line.innerHTML = `${day} ${hour}:${minute}`;
   
   function displayWeather(response) {
+    console.log(response.data);
     document.querySelector("#location").innerHTML = response.data.name;
     document.querySelector("#currentWeather").innerHTML = Math.round(
       response.data.main.temp) + "°";
+      document.querySelector("#description").innerHTML = `${response.data.weather[0].description}<br />humidity: ${response.data.main.humidity}%
+        <br />wind speed: ${response.data.wind.speed} mph`;
+    
   }
 
   function displayForecast(response) {
@@ -33,7 +37,7 @@ let days = [
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(displayWeather);
 
-    let apiUrl2 = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
+    let apiUrl2 = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl2).then(displayForecast);
   }
   
