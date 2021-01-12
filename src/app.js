@@ -23,11 +23,18 @@ let days = [
     document.querySelector("#currentWeather").innerHTML = Math.round(
       response.data.main.temp) + "°";
   }
+
+  function displayForecast(response) {
+      console.log(response.data);
+  }
   
   function search(city) {
     let apiKey = "bdc32e59a57c63fe6750b41980c575b2";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(displayWeather);
+
+    let apiUrl2 = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
+    axios.get(apiUrl2).then(displayForecast);
   }
   
   function handleSubmit(event) {
