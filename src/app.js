@@ -19,13 +19,13 @@ let days = [
   line.innerHTML = `${day} ${hour}:${minute}`;
   
   function displayWeather(response) {
-    console.log(response.data);
+    let icon = document.querySelector("#icon");
     document.querySelector("#location").innerHTML = response.data.name;
-    document.querySelector("#currentWeather").innerHTML = Math.round(
-      response.data.main.temp) + "°";
+    document.querySelector("#currentWeather").innerHTML = `${Math.round(
+      response.data.main.temp)}°`;
       document.querySelector("#description").innerHTML = `${response.data.weather[0].description}<br />humidity: ${response.data.main.humidity}%
         <br />wind speed: ${response.data.wind.speed} mph`;
-    
+    icon.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png` )
   }
 
   function displayForecast(response) {

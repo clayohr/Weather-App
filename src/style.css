@@ -10,6 +10,11 @@ button,
   text-align: center;
   color: #f4f3ee;
 }
+img {
+  margin: auto;
+  display: inline-block;
+  width: 50px;
+}
 
 body {
   background: #8a817c;
