@@ -5,7 +5,7 @@ h5,
 h6,
 button,
 ::placeholder,
-.col, .value {
+.col, .value, .units {
   font-family: monospace;
   text-align: center;
   color: #463f3a;
@@ -82,8 +82,19 @@ a {
   padding: 18px;
   background: #e0afa0;
 }
+.weathergrid {
+  padding-left: 13px;
+}
 .row {
   padding: 19px 0px;
+  
+}
+.units {
+  display: inline-block;
+  margin-bottom: 10px;
+  vertical-align: top;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 ::placeholder {
@@ -106,4 +117,8 @@ a {
   margin: auto;
   display: inline-block;
   width: 50px;
+}
+#currentWeather {
+  display: inline-block;
+  margin-right: 5px;
 }
