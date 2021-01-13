@@ -30,6 +30,63 @@ let days = [
 
   function displayForecast(response) {
       console.log(response.data);
+      let forecastElement = document.querySelector("#weatherforecast");
+
+      forecastElement.innerHTML = ` <div class="row" >
+      <div class="col">
+          Tomorrow
+      </div>
+      <div class="col">
+        <img id="icony" src="http://openweathermap.org/img/wn/${response.data.list[6].weather[0].icon}@2x.png" />
+      </div>
+      <div class="col">
+          ${Math.round(response.data.list[8].main.temp_max)}° / ${Math.round(response.data.list[6].main.temp_min)}°
+      </div>
+  </div>
+  <div class="row">
+      <div class="col">
+          Monday
+      </div>
+      <div class="col">
+          <img id="icony" src="http://openweathermap.org/img/wn/${response.data.list[2].weather[0].icon}@2x.png" />
+      </div>
+      <div class="col">
+        ${Math.round(response.data.list[2].main.temp_max)}° / ${Math.round(response.data.list[2].main.temp_min)}°
+      </div>
+  </div>
+  <div class="row">
+      <div class="col">
+          Tuesday
+      </div>
+      <div class="col">
+        <img id="icony" src="http://openweathermap.org/img/wn/${response.data.list[24].weather[0].icon}@2x.png" />
+      </div>
+      <div class="col">
+          49° / 33°
+      </div>
+  </div>
+  <div class="row">
+      <div class="col">
+          Wednesday
+      </div>
+      <div class="col">
+        <img id="icony" src="http://openweathermap.org/img/wn/${response.data.list[32].weather[0].icon}@2x.png" />
+      </div>
+      <div class="col">
+          46° / 27°
+      </div>
+  </div>
+  <div class="row">
+      <div class="col">
+          Thursday
+      </div>
+      <div class="col">
+      <img id="icony" src="http://openweathermap.org/img/wn/${response.data.list[39].weather[0].icon}@2x.png" />
+      </div>
+      <div class="col">
+          48° / 32°
+      </div>
+  </div>`
   }
   
   function search(city) {

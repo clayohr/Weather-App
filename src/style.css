@@ -8,12 +8,13 @@ button,
 .col, .value {
   font-family: monospace;
   text-align: center;
-  color: #f4f3ee;
+  color: #463f3a;
 }
+
 img {
-  margin: auto;
-  display: inline-block;
-  width: 50px;
+  display: block;
+  width: 30px;
+  margin: 0 auto;
 }
 
 body {
@@ -21,10 +22,10 @@ body {
 }
 
 input {
-  background: #e0afa0;
-  border: 1px solid #8a817c;
+  background: #8a817c;
+  border: 1px solid whitesmoke;
   text-align: center;
-  color: #463f3a;
+  color: whitesmoke;
   font-size: 12px;
 }
 i {
@@ -32,9 +33,9 @@ i {
 }
 
 button {
-  border: 1px solid #8a817c;
+  border: 1px solid whitesmoke;
   text-align: center;
-  background: #e0afa0;
+  background: #8a817c;
   padding: 2px 6px 0px;
   display: inline-block;
   margin: 10px auto;
@@ -50,14 +51,16 @@ a {
   text-decoration: none;
   color: #463f3a;
 }
+
+
 .city {
-  border: 1px solid #463f3a;
+  border: 1px solid whitesmoke;
   margin: 0 auto;
   display: block;
   max-width: 300px;
   margin-bottom: 20px;
   padding: 16px;
-  background: #463f3a;
+  background: #e0afa0;
 }
 
 .weatherapp {
@@ -65,19 +68,19 @@ a {
   margin: auto;
   max-width: 600px;
   margin-top: 20px;
-  border: 1px solid #463f3a;
+  border: 1px solid whitesmoke;
   text-align: center;
   padding: 20px 0px;
-  background: #bcb8b1;
+  background: #463f3a;
 }
 
 .weekly {
-  border: 1px solid #463f3a;
+  border: 1px solid whitesmoke;
   display: block;
   margin: 0 auto;
   max-width: 350px;
   padding: 18px;
-  background: #463f3a;
+  background: #e0afa0;
 }
 .row {
   padding: 19px 0px;
@@ -85,15 +88,22 @@ a {
 
 ::placeholder {
   text-align: center;
-  color: #463f3a;
+  color: whitesmoke;
+  padding: 0px 2px;
 }
 
 #location-selector {
-  color: #463f3a;
+  color: whitesmoke;
   font-size: 12px;
   margin: 0 auto;
 }
 
 #search-box {
   padding: 10px;
+}
+
+#icon {
+  margin: auto;
+  display: inline-block;
+  width: 50px;
 }
