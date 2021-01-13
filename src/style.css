@@ -22,7 +22,7 @@ body {
 }
 
 input {
-  background: #8a817c;
+  background: #463f3a;
   border: 1px solid whitesmoke;
   text-align: center;
   color: whitesmoke;
@@ -35,7 +35,7 @@ i {
 button {
   border: 1px solid whitesmoke;
   text-align: center;
-  background: #8a817c;
+  background: #463f3a;
   padding: 2px 6px 0px;
   display: inline-block;
   margin: 10px auto;
