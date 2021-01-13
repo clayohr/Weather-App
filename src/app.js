@@ -114,6 +114,9 @@ let days = [
       position.coords.latitude
     }&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(displayWeather);
+
+    let apiUrl2 = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl2).then(displayForecast);
   }
   
   function getLocation(event) {
