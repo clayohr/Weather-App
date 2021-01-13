@@ -3,6 +3,8 @@ h2,
 h3,
 h5,
 h6,
+p,
+a,
 button,
 ::placeholder,
 .col, .value, .units {
@@ -50,13 +52,23 @@ h5 {
 a {
   text-decoration: none;
   color: whitesmoke
+  
 }
 
 a:hover {
   color: whitesmoke;
 }
-
-
+.disclaimer {
+  text-align: center;
+  color: whitesmoke;
+  margin: 0 auto;
+}
+.git {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  text-decoration: underline;
+}
 .city {
   border: 1px solid whitesmoke;
   margin: 0 auto;
