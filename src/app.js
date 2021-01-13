@@ -26,6 +26,8 @@ let days = [
       document.querySelector("#description").innerHTML = `${response.data.weather[0].description}<br />humidity: ${response.data.main.humidity}%
         <br />wind speed: ${response.data.wind.speed} mph`;
     icon.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png` )
+
+    fTemp = response.data.main.temp;
   }
 
   function displayForecast(response) {
@@ -36,7 +38,7 @@ let days = [
 
       forecastElement.innerHTML = ` <div class="row" >
       <div class="col">
-          ${response.data.list[6].dt_txt} AM
+          ${response.data.list[6].dt_txt}
       </div>
       <div class="col">
         <img id="icony" src="http://openweathermap.org/img/wn/${response.data.list[6].weather[0].icon}@2x.png" />
@@ -47,7 +49,7 @@ let days = [
   </div>
   <div class="row">
       <div class="col">
-        ${response.data.list[14].dt_txt} AM
+        ${response.data.list[14].dt_txt}
       </div>
       <div class="col">
           <img id="icony" src="http://openweathermap.org/img/wn/${response.data.list[14].weather[0].icon}@2x.png" />
@@ -58,7 +60,7 @@ let days = [
   </div>
   <div class="row">
       <div class="col">
-        ${response.data.list[22].dt_txt} AM
+        ${response.data.list[22].dt_txt}
       </div>
       <div class="col">
         <img id="icony" src="http://openweathermap.org/img/wn/${response.data.list[22].weather[0].icon}@2x.png" />
@@ -69,7 +71,7 @@ let days = [
   </div>
   <div class="row">
       <div class="col">
-        ${response.data.list[30].dt_txt} AM
+        ${response.data.list[30].dt_txt}
       </div>
       <div class="col">
         <img id="icony" src="http://openweathermap.org/img/wn/${response.data.list[30].weather[0].icon}@2x.png" />
@@ -80,7 +82,7 @@ let days = [
   </div>
   <div class="row">
       <div class="col">
-        ${response.data.list[38].dt_txt} AM
+        ${response.data.list[38].dt_txt}
       </div>
       <div class="col">
       <img id="icony" src="http://openweathermap.org/img/wn/${response.data.list[38].weather[0].icon}@2x.png" />
@@ -124,5 +126,29 @@ let days = [
   
   let locationButton = document.querySelector("#location-selector");
   locationButton.addEventListener("click", getLocation);
+  
+  
+
+function convertTempCelcius(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#currentWeather");
+  let celciusTemp = (fTemp - 32)*(5/9);
+  tempElement.innerHTML = `${Math.round(celciusTemp)}°`;
+}
+
+function convertTempFaren(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#currentWeather");
+  tempElement.innerHTML = `${Math.round(fTemp)}°`;
+
+}
+
+let fTemp = null;
+
+let celcius = document.querySelector("#celcius");
+celcius.addEventListener("click", convertTempCelcius);
+
+let faren = document.querySelector("#faren");
+faren.addEventListener("click", convertTempFaren);
   
   search("city of salem");
