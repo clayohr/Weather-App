@@ -32,59 +32,61 @@ let days = [
       console.log(response.data);
       let forecastElement = document.querySelector("#weatherforecast");
 
+      
+
       forecastElement.innerHTML = ` <div class="row" >
       <div class="col">
-          Tomorrow
+          ${response.data.list[6].dt_txt} AM
       </div>
       <div class="col">
         <img id="icony" src="http://openweathermap.org/img/wn/${response.data.list[6].weather[0].icon}@2x.png" />
       </div>
       <div class="col">
-          ${Math.round(response.data.list[8].main.temp_max)}° / ${Math.round(response.data.list[6].main.temp_min)}°
+          ${Math.round(response.data.list[6].main.temp)}°
       </div>
   </div>
   <div class="row">
       <div class="col">
-          Monday
+        ${response.data.list[14].dt_txt} AM
       </div>
       <div class="col">
-          <img id="icony" src="http://openweathermap.org/img/wn/${response.data.list[2].weather[0].icon}@2x.png" />
+          <img id="icony" src="http://openweathermap.org/img/wn/${response.data.list[14].weather[0].icon}@2x.png" />
       </div>
       <div class="col">
-        ${Math.round(response.data.list[2].main.temp_max)}° / ${Math.round(response.data.list[2].main.temp_min)}°
-      </div>
-  </div>
-  <div class="row">
-      <div class="col">
-          Tuesday
-      </div>
-      <div class="col">
-        <img id="icony" src="http://openweathermap.org/img/wn/${response.data.list[24].weather[0].icon}@2x.png" />
-      </div>
-      <div class="col">
-          49° / 33°
+        ${Math.round(response.data.list[14].main.temp)}°
       </div>
   </div>
   <div class="row">
       <div class="col">
-          Wednesday
+        ${response.data.list[22].dt_txt} AM
       </div>
       <div class="col">
-        <img id="icony" src="http://openweathermap.org/img/wn/${response.data.list[32].weather[0].icon}@2x.png" />
+        <img id="icony" src="http://openweathermap.org/img/wn/${response.data.list[22].weather[0].icon}@2x.png" />
       </div>
       <div class="col">
-          46° / 27°
+        ${Math.round(response.data.list[22].main.temp)}°
       </div>
   </div>
   <div class="row">
       <div class="col">
-          Thursday
+        ${response.data.list[30].dt_txt} AM
       </div>
       <div class="col">
-      <img id="icony" src="http://openweathermap.org/img/wn/${response.data.list[39].weather[0].icon}@2x.png" />
+        <img id="icony" src="http://openweathermap.org/img/wn/${response.data.list[30].weather[0].icon}@2x.png" />
       </div>
       <div class="col">
-          48° / 32°
+        ${Math.round(response.data.list[30].main.temp)}°
+      </div>
+  </div>
+  <div class="row">
+      <div class="col">
+        ${response.data.list[38].dt_txt} AM
+      </div>
+      <div class="col">
+      <img id="icony" src="http://openweathermap.org/img/wn/${response.data.list[38].weather[0].icon}@2x.png" />
+      </div>
+      <div class="col">
+        ${Math.round(response.data.list[38].main.temp)}°
       </div>
   </div>`
   }
